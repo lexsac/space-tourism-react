@@ -4,6 +4,8 @@
     text-align: center;
     color: hsl(var(--clr-light-purple));
     font-weight: var(--fw-regular);
+    display: flex;
+    flex-direction: column;
 }
 
 .home-page__title {
@@ -16,11 +18,42 @@
 
 .home-page__title > span {
     font-family: var(--ff-heading);
-    color: var(--clr-light-cream);
+    color: white; /* custom property wasn't working*/
     font-size: var(--fs-900);
 }
 
 .home-page__description {
     font-size: var(--fs-300);
     font-family: var(--ff-body);
+}
+
+/* Tablet */
+@media (min-width: 35em) {
+    .home-page__title {
+        letter-spacing: var(--ls-lg);
+        font-size: var(--fs-500);
+    }
+
+    .home-page__description {
+        max-width: 65%;
+        margin: 0 auto;
+        line-height: var(--lh-sm);
+    }
+}
+
+/* Desktop */
+@media (min-width: 60em) {
+    .home-page {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .home-page__title {
+        letter-spacing: var(--ls-xl);
+    }
+
+    .home-page__description {
+        margin-left: 0;
+        line-height: var(--lh-med);
+    }
 }
