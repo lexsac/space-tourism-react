@@ -1,0 +1,39 @@
+.button {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    border: none;
+    padding: 2rem;
+    position: relative;
+    display: grid;
+    place-items: center;
+    margin: 0 auto; 
+    font-family: var(--ff-heading);
+    text-transform: uppercase;
+    font-size: var(--fs-500);
+    letter-spacing: var(--ls-xs);
+    cursor: pointer;
+}
+
+.button::after {
+    content: '';
+    background-color: hsl(var(--clr-light-cream) / 0.25);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    transition: transform 500ms ease-in-out;
+}
+
+.button:hover::after,
+.button:active::after {
+    transform: scale(1.5); /* animation on width and height is taxing for browser and could lead to overflows, so this is a better option */
+}
+
+/* Desktop */
+@media (min-width: 60em) {
+    .button {
+        padding: 4rem;
+    }
+}
+
+
