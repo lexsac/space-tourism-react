@@ -1,0 +1,26 @@
+@import "index.css";
+
+.home-page {
+    text-align: center;
+    color: hsl(var(--clr-light-purple));
+    font-weight: var(--fw-regular);
+}
+
+.home-page__title {
+    text-transform: uppercase;
+    font-family: var(--ff-body-condensed);
+    font-weight: var(--fw-regular);
+    letter-spacing: var(--ls-med);
+    font-size: var(--fs-400);
+}
+
+.home-page__title > span {
+    font-family: var(--ff-heading);
+    color: var(--clr-light-cream);
+    font-size: var(--fs-900);
+}
+
+.home-page__description {
+    font-size: var(--fs-300);
+    font-family: var(--ff-body);
+}
