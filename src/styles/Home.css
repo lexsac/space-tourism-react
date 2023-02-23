@@ -1,4 +1,4 @@
-@import "index.css";
+@import './index.css';
 
 .home-page {
     text-align: center;
@@ -44,6 +44,7 @@
 /* Desktop */
 @media (min-width: 60em) {
     .home-page {
+        margin-inline: 10rem;
         flex-direction: row;
         text-align: left;
     }
