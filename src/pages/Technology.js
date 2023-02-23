@@ -4,9 +4,9 @@ import '../styles/Technology.css';
 const Technology = () => {
     return (
         <>
-            <section>
+            <section className = "tech-page">
                 <div>
-                    <h1><span>03</span>Space launch 101</h1>
+                    <h1 className = "tech-page__title"><span>03</span>Space launch 101</h1>
                 </div>
 
                 <div>
@@ -15,7 +15,7 @@ const Technology = () => {
                     <p>description</p>
                 </div>
 
-                <picture>
+                <picture className = "tech-page__img">
                     {/* <source srcset={images.portrait} media='(min-width: 60em)' /> */}
                     <img src={require('../images/technology/image-space-capsule-portrait.jpg')} alt='' />
                 </picture>
