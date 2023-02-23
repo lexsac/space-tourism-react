@@ -4,17 +4,17 @@ import '../styles/Crew.css';
 const Crew = () => {
     return (
         <>
-            <section>
+            <section className="crew-page">
                 <div>
-                    <h1><span>02</span>Meet your crew</h1>
+                    <h1 className="crew-page__title"><span>02</span>Meet your crew</h1>
                 </div>
                 <div>
-                    <h2>Role</h2>
-                    <h3>Position</h3>
+                    <h2 className="crew-page__role">Role</h2>
+                    <h3 className="crew-page__position">Position</h3>
 
-                    <p>Bio</p>
+                    <p className = "crew-page__bio">Bio</p>
 
-                    <img src={require('../images/crew/image-douglas-hurley.png')} />
+                    <img className = "crew-page__img" src={require('../images/crew/image-douglas-hurley.png')} />
                 </div>
             </section>
         </>
