@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/Technology.css';
-import data from '../data.json';
 import LaunchVehicleImageLandscape from '../images/technology/image-launch-vehicle-landscape.jpg';
 import LaunchVehicleImagePortrait from '../images/technology/image-launch-vehicle-portrait.jpg';
 import SpaceportImageLandscape from '../images/technology/image-spaceport-landscape.jpg';
@@ -8,6 +7,8 @@ import SpaceportImagePortrait from '../images/technology/image-spaceport-portrai
 import SpaceCapsuleImageLandscape from '../images/technology/image-space-capsule-landscape.jpg';
 import SpaceCapsuleImagePortrait from '../images/technology/image-space-capsule-portrait.jpg';
 import PageTitle from '../components/PageTitle';
+import SelectionList from '../components/SelectionList';
+import data from '../data.json';
 
 const Technology = () => {
     const [selectedTechnology, setSelectedTechnology] = useState(data['technology'][0]);
@@ -61,22 +62,10 @@ const Technology = () => {
                         <p className="technology-page__description">{selectedTechnology.description}</p>
                     </div>
 
-                    <div>
-                        <ul className="technology-page__selection-dots">
-                            {data['technology'].map((technology, idx) => {
-                                return (
-                                    <li className="technology-page__dot" key={idx}>
-                                        <button className={(idx === isActive) ? 'active' : null} onClick={(e) => handleClick(e, idx)}>
-                                            {idx + 1}
-                                        </button>
-                                    </li>
-                                )
-                            })}
-                        </ul>
-                    </div>
+                    <SelectionList className="technology-page__selection-dots" data={data} page={'technology'} isActive={isActive} handleClick={handleClick} buttonText={'index'} />
 
                     <picture className = "technology-page__img">
-                        <source srcset={portraitImage} media='(min-width: 60em)' />
+                        {/* <source srcset={portraitImage} media='(min-width: 60em)' /> */}
                         <img src={landscapeImage} alt={selectedTechnology.name} />
                     </picture>
                 </div>

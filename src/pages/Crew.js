@@ -6,6 +6,7 @@ import MarkShuttleworthImage from '../images/crew/image-mark-shuttleworth.png';
 import VictorGloverImage from '../images/crew/image-victor-glover.png';
 import AnoushehAnsariImage from '../images/crew/image-anousheh-ansari.png';
 import PageTitle from '../components/PageTitle';
+import SelectionList from '../components/SelectionList';
 
 const Crew = () => {
     const [selectedCrew, setSelectedCrew] = useState(data['crew'][0]);
@@ -42,17 +43,7 @@ const Crew = () => {
 
                 <div className="crew-page__info">
                     <div className="crew-page__details">
-                        <ul className="crew-page__selection-dots">
-                            {data['crew'].map((crew, idx) => {
-                                return (
-                                    <li className="crew-page__dot" key={idx}>
-                                        <button className={(idx === isActive) ? 'active' : null} onClick={(e) => handleClick(e, idx)}>
-                                            <span className="sr-only">`The ${crew.role}`</span>
-                                        </button>
-                                    </li>
-                                )
-                            })}
-                        </ul>
+                        <SelectionList className="crew-page__selection-dots" data={data} page={'crew'} isActive={isActive} handleClick={handleClick} />
 
                         <div>
                             <h2 className="crew-page__role">{selectedCrew.role}</h2>
@@ -61,9 +52,7 @@ const Crew = () => {
                         </div>
                     </div>
 
-                    <div>
-                        <img className = "crew-page__img" src={image} />
-                    </div>
+                    <img className = "crew-page__img" src={image} />
                 </div>
             </section>
         </>

@@ -6,10 +6,11 @@ import MarsImage from '../images/destination/image-mars.png';
 import EuropaImage from '../images/destination/image-europa.png';
 import TitanImage from '../images/destination/image-titan.png';
 import PageTitle from '../components/PageTitle';
+import SelectionList from '../components/SelectionList';
 // import Image from '../components/Image';
 
 const Destination = () => {
-    const [selectedPlanet, setSelectedPlanet] = useState(data['destinations'][0]);
+    const [selectedPlanet, setSelectedPlanet] = useState(data['destination'][0]);
     // console.log(data['destinations'][0]);
     const [image, setImage] = useState(MoonImage);
     const [isActive, setIsActive] = useState(0);
@@ -17,9 +18,9 @@ const Destination = () => {
     function handleClick(e, idx) {
         e.preventDefault();
         setIsActive(idx);
-        setSelectedPlanet(data['destinations'][idx]);
+        setSelectedPlanet(data['destination'][idx]);
 
-        switch(data['destinations'][idx].name) {
+        switch(data['destination'][idx].name) {
             case 'Moon':
                 setImage(MoonImage);
                 break;
@@ -47,15 +48,7 @@ const Destination = () => {
                     {/* <Image img={{ image }} className="destination-page__img" /> */}
 
                     <div className="destination-page__text">
-                        <ul className="destination-page__tab-list">
-                            {data['destinations'].map((planet, idx) => {
-                                return (
-                                    <li className="destination-page__tab" key={idx}>
-                                        <button className={(idx === isActive) ? 'active' : null} onClick={(e) => handleClick(e, idx)}>{planet.name}</button>
-                                    </li>
-                                )
-                            })}
-                        </ul>
+                        <SelectionList className="destination-page__tab-list" data={data} page={'destination'} isActive={isActive} handleClick={handleClick} buttonText={'name'} />
 
                         <h2 className="destination-page__name">{selectedPlanet.name}</h2>
                         <p className="destination-page__description">{selectedPlanet.description}</p>
