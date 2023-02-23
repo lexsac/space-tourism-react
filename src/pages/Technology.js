@@ -8,6 +8,7 @@ import SpaceCapsuleImageLandscape from '../images/technology/image-space-capsule
 import SpaceCapsuleImagePortrait from '../images/technology/image-space-capsule-portrait.jpg';
 import PageTitle from '../components/PageTitle';
 import SelectionList from '../components/SelectionList';
+import Image from '../components/Image';
 import data from '../data.json';
 
 const Technology = () => {
@@ -35,7 +36,7 @@ const Technology = () => {
                 break;
         }
 
-        switch(data['crew'][idx].name) {
+        switch(data['technology'][idx].name) {
             case 'Launch vehicle':
                 setPortraitImage(LaunchVehicleImagePortrait);
                 break;
@@ -64,10 +65,7 @@ const Technology = () => {
 
                     <SelectionList data={data} page={'technology'} isActive={isActive} handleClick={handleClick} buttonText={'index'} />
 
-                    <picture className = "technology-page__img">
-                        {/* <source srcset={portraitImage} media='(min-width: 60em)' /> */}
-                        <img src={landscapeImage} alt={selectedTechnology.name} />
-                    </picture>
+                    <Image page={'technology'} landscapeImage={landscapeImage} portraitImage={portraitImage} alt={selectedTechnology.name} />
                 </div>
             </section>
         </>

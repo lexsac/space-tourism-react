@@ -10,7 +10,7 @@ import SelectionList from '../components/SelectionList';
 import Image from '../components/Image';
 
 const Destination = () => {
-    const [selectedPlanet, setSelectedPlanet] = useState(data['destination'][0]);
+    const [selectedDestination, setSelectedDestination] = useState(data['destination'][0]);
     // console.log(data['destinations'][0]);
     const [image, setImage] = useState(MoonImage);
     const [isActive, setIsActive] = useState(0);
@@ -18,7 +18,7 @@ const Destination = () => {
     function handleClick(e, idx) {
         e.preventDefault();
         setIsActive(idx);
-        setSelectedPlanet(data['destination'][idx]);
+        setSelectedDestination(data['destination'][idx]);
 
         switch(data['destination'][idx].name) {
             case 'Moon':
@@ -43,23 +43,23 @@ const Destination = () => {
             <section className="destination-page">
                 <PageTitle num={'01'} text={'Pick your destination'} />
 
-                <div className="destination-page__info">                    
-                    <Image image={image} page={'destination'} />
-
+                <div className="destination-page__info"> 
+                    <Image page={'destination'} landscapeImage={image} portraitImage={image} alt={selectedDestination.name} />
+                   
                     <div className="destination-page__text">
                         <SelectionList data={data} page={'destination'} isActive={isActive} handleClick={handleClick} buttonText={'name'} />
 
-                        <h2 className="destination-page__name">{selectedPlanet.name}</h2>
-                        <p className="destination-page__description">{selectedPlanet.description}</p>
+                        <h2 className="destination-page__name">{selectedDestination.name}</h2>
+                        <p className="destination-page__description">{selectedDestination.description}</p>
 
                         <div className="destination-page__facts">
                             <div>
                                 <h3 className="destination-page__facts-title">Avg. distance</h3>
-                                <p className="destination-page__facts-data">{selectedPlanet.distance}</p>
+                                <p className="destination-page__facts-data">{selectedDestination.distance}</p>
                             </div>
                             <div>
                                 <h3 className="destination-page__facts-title">Est. travel time</h3>
-                                <p className="destination-page__facts-data">{selectedPlanet.travel}</p>
+                                <p className="destination-page__facts-data">{selectedDestination.travel}</p>
                             </div>
                         </div>
                     </div>
