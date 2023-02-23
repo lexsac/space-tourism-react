@@ -1,6 +1,6 @@
 @import './index.css';
 
-.destination-page {
+.destination-page__info {
     text-align: center;
 }
 
@@ -12,22 +12,6 @@
 .destination-page__description {
     max-width: 100%;
     margin-inline: auto;
-}
-
-.destination-page__title > span {
-    display: inline;
-    padding-right: 1rem;
-    color:hsl( var(--clr-light-cream) / 0.3 );
-    font-weight: var(--fw-bold);
-}
-
-.destination-page__title {
-    text-transform: uppercase;
-    color: hsl(var(--clr-light-cream));
-    font-family: var(--ff-body-condensed);
-    font-size: var(--fs-400);
-    font-weight: var(--fw-regular);
-    letter-spacing: var(--ls-med);
 }
 
 .destination-page__name {
@@ -44,7 +28,7 @@
     font-size: var(--fs-300);
 }
 
-.destination-page__info {
+.destination-page__facts {
     display: flex;
     color: hsl(var(--clr-light-cream));
     flex-direction: column;
@@ -52,7 +36,7 @@
     border-top: 1px solid hsl(var(--clr-light-cream) / 0.2);
 }
 
-.destination-page__info-title {
+.destination-page__facts-title {
     color: hsl(var(--clr-light-purple));
     text-transform: uppercase;
     font-family: var(--ff-body-condensed);
@@ -61,7 +45,7 @@
     letter-spacing: var(--ls-sm);
 }
 
-.destination-page__info-data {
+.destination-page__facts-data {
     text-transform: uppercase;
     font-family: var(--ff-heading);
     font-size: var(--fs-700);
@@ -98,7 +82,7 @@
 
 /* Desktop */
 @media (min-width: 60em) {
-    .destination-page {
+    .destination-page__info {
         display: flex;
         padding-top: 10rem;
         text-align: left;
