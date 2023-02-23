@@ -25,13 +25,13 @@
     font-size: var(--fs-300);
 }
 
-.technology-page__selection-dots {
+.technology-page__selectors {
     display: flex;
     gap: 1rem;
     justify-content: center;
 }
 
-.technology-page__selection-dots > li > * {
+.technology-page__selector > * {
     cursor: pointer;
     border-radius: 50%;
     border: 1px solid hsl( var(--clr-light-cream) / 0.3);
@@ -43,7 +43,12 @@
     color: hsl( var(--clr-light-cream) );
 }
 
-.technology-page__selection-dots > li > *:hover {
+.technology-page__selector > *:hover,
+.technology-page__selector > *:focus {
+    background-color: hsl( var(--clr-light-cream) / 0.3);
+}
+
+.technology-page__selector:active > * {
     background-color: hsl( var(--clr-light-cream) / 0.3);
 }
 
