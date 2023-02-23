@@ -46,7 +46,7 @@
     font-weight: var(--fw-bold);
 }
 
-.crew-page__selection-dots {
+.crew-page__selectors {
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -96,7 +96,7 @@
         width: 90%;
     }
 
-    .crew-page__selection-dots {
+    .crew-page__selectiors {
         justify-content: left;
     }
 }
