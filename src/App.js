@@ -4,13 +4,15 @@ import Home from './pages/Home';
 import Destination from './pages/Destination';
 import Crew from './pages/Crew';
 import Technology from './pages/Technology';
-
-import './App.css';
+import Header from './components/Header';
+import './styles/App.css';
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Router>
+        <Header />
+        
         <Routes>
           <Route path="/" exact element={<Home/>} />
           <Route path="/destination" element={<Destination />} />
@@ -18,7 +20,7 @@ function App() {
           <Route path="/technology" element={<Technology />} />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 
