@@ -37,31 +37,32 @@ const Crew = () => {
     return (
         <>
             <section className="crew-page">
-                <div>
-                    <h1 className="crew-page__title"><span>02</span>Meet your crew</h1>
-                </div>
+                <h1 className="crew-page__title"><span>02</span>Meet your crew</h1>
 
-                <div>
-                    <ul className="crew-page__selection-dots">
-                        {data['crew'].map((crew, idx) => {
-                            return (
-                                <li className="crew-page__dot" key={idx}>
-                                    <button className={(idx === isActive) ? 'active' : null} onClick={(e) => handleClick(e, idx)}>
-                                        <span className="sr-only">`The ${crew.role}`</span>
-                                    </button>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
+                <div className="crew-page__info">
+                    <div className="crew-page__details">
+                        <ul className="crew-page__selection-dots">
+                            {data['crew'].map((crew, idx) => {
+                                return (
+                                    <li className="crew-page__dot" key={idx}>
+                                        <button className={(idx === isActive) ? 'active' : null} onClick={(e) => handleClick(e, idx)}>
+                                            <span className="sr-only">`The ${crew.role}`</span>
+                                        </button>
+                                    </li>
+                                )
+                            })}
+                        </ul>
 
-                <div>
-                    <h2 className="crew-page__role">{selectedCrew.role}</h2>
-                    <h3 className="crew-page__position">{selectedCrew.position}</h3>
+                        <div>
+                            <h2 className="crew-page__role">{selectedCrew.role}</h2>
+                            <h3 className="crew-page__name">{selectedCrew.name}</h3>
+                            <p className = "crew-page__bio">{selectedCrew.bio}</p>
+                        </div>
+                    </div>
 
-                    <p className = "crew-page__bio">{selectedCrew.bio}</p>
-
-                    <img className = "crew-page__img" src={image} />
+                    <div>
+                        <img className = "crew-page__img" src={image} />
+                    </div>
                 </div>
             </section>
         </>
