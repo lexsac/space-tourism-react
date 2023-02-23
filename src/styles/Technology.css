@@ -1,0 +1,60 @@
+.technology-page__info {
+    text-align: center;
+}
+
+.technology-page__terminology {
+    text-transform: uppercase;
+    font-weight: var(--fw-regular);
+    font-family: var(--ff-body-condensed);
+    color: hsl(var(--clr-light-purple));
+    font-size: var(--fs-200);
+}
+
+.technology-page__name {
+    text-transform: uppercase;
+    font-weight: var(--fw-regular);
+    font-family: var(--ff-heading);
+    color: hsl(var(--clr-light-cream));
+    font-size: var(--fs-600);
+}
+
+.technology-page__description {
+    font-weight: var(--fw-regular);
+    font-family: var(--ff-body);
+    color: hsl(var(--clr-light-purple));
+    font-size: var(--fs-300);
+}
+
+.technology-page__selection-dots {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.technology-page__selection-dots > li > * {
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid hsl( var(--clr-light-cream) / 0.3);
+    width: 40px;
+    text-align: center;
+    padding-top: 0.5rem;
+    aspect-ratio: 1;
+    background-color: hsl( var(--clr-light-cream) / 0);
+    color: hsl( var(--clr-light-cream) );
+}
+
+.technology-page__selection-dots > li > *:hover {
+    background-color: hsl( var(--clr-light-cream) / 0.3);
+}
+
+/* Tablet */
+@media (min-width: 35em) {
+    
+}
+
+/* Desktop */
+@media (min-width: 60em) {
+    .technology-page {
+        margin-inline: 10rem;
+    }
+}

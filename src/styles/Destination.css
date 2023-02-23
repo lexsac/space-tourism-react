@@ -82,6 +82,10 @@
 
 /* Desktop */
 @media (min-width: 60em) {
+    .destination-page {
+        margin-inline: 10rem;
+    }
+
     .destination-page__info {
         display: flex;
         padding-top: 10rem;

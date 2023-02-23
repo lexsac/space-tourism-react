@@ -71,6 +71,10 @@
 
 /* Desktop */
 @media (min-width: 60em) {
+    .crew-page {
+        margin-inline: 10rem;
+    }
+
     .crew-page__info {
         flex-direction: row;
     }
