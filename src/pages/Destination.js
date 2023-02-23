@@ -48,7 +48,7 @@ const Destination = () => {
                     {/* <Image img={{ image }} className="destination-page__img" /> */}
 
                     <div className="destination-page__text">
-                        <SelectionList className="destination-page__tab-list" data={data} page={'destination'} isActive={isActive} handleClick={handleClick} buttonText={'name'} />
+                        <SelectionList data={data} page={'destination'} isActive={isActive} handleClick={handleClick} buttonText={'name'} />
 
                         <h2 className="destination-page__name">{selectedPlanet.name}</h2>
                         <p className="destination-page__description">{selectedPlanet.description}</p>

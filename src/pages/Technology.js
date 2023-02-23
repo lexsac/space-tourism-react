@@ -62,7 +62,7 @@ const Technology = () => {
                         <p className="technology-page__description">{selectedTechnology.description}</p>
                     </div>
 
-                    <SelectionList className="technology-page__selection-dots" data={data} page={'technology'} isActive={isActive} handleClick={handleClick} buttonText={'index'} />
+                    <SelectionList data={data} page={'technology'} isActive={isActive} handleClick={handleClick} buttonText={'index'} />
 
                     <picture className = "technology-page__img">
                         {/* <source srcset={portraitImage} media='(min-width: 60em)' /> */}

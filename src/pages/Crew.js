@@ -43,7 +43,7 @@ const Crew = () => {
 
                 <div className="crew-page__info">
                     <div className="crew-page__details">
-                        <SelectionList className="crew-page__selection-dots" data={data} page={'crew'} isActive={isActive} handleClick={handleClick} />
+                        <SelectionList data={data} page={'crew'} isActive={isActive} handleClick={handleClick} />
 
                         <div>
                             <h2 className="crew-page__role">{selectedCrew.role}</h2>
