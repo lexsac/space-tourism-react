@@ -7,7 +7,7 @@ import EuropaImage from '../images/destination/image-europa.png';
 import TitanImage from '../images/destination/image-titan.png';
 import PageTitle from '../components/PageTitle';
 import SelectionList from '../components/SelectionList';
-// import Image from '../components/Image';
+import Image from '../components/Image';
 
 const Destination = () => {
     const [selectedPlanet, setSelectedPlanet] = useState(data['destination'][0]);
@@ -44,8 +44,7 @@ const Destination = () => {
                 <PageTitle num={'01'} text={'Pick your destination'} />
 
                 <div className="destination-page__info">                    
-                    <img className="destination-page__img" src={image} alt='' />
-                    {/* <Image img={{ image }} className="destination-page__img" /> */}
+                    <Image image={image} page={'destination'} />
 
                     <div className="destination-page__text">
                         <SelectionList data={data} page={'destination'} isActive={isActive} handleClick={handleClick} buttonText={'name'} />
