@@ -9,6 +9,7 @@ const SelectionList = ({ data, page, isActive, handleClick, buttonText }) => {
               className={(idx === isActive) ? `${page}-page__selector active` : `${page}-page__selector`} 
               key={idx}>
                 <button 
+                    className={(idx === isActive) ? `active` : ''} 
                     onClick={(e) => handleClick(e, idx)}>
                     {buttonText === 'index' ? idx + 1 
                         : buttonText === 'name' ? item.name
