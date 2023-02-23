@@ -95,3 +95,18 @@
     border-color: hsl(var(--clr-light-cream) / 1);
     color: hsl(var(--clr-light-cream));
 }
+
+/* Desktop */
+@media (min-width: 60em) {
+    .destination-page {
+        display: flex;
+        padding-top: 10rem;
+        text-align: left;
+        justify-content: space-between;
+        margin-inline: 10rem;
+    }
+
+    .destination-page__description {
+        width: 28rem;
+    }
+}
