@@ -54,30 +54,32 @@ const Technology = () => {
             <section className = "technology-page">
                 <PageTitle num={'03'} text={'Space launch 101'} />
 
-                <div>
-                    <h2>The terminology...</h2>
-                    <h3>{selectedTechnology.name}</h3>
-                    <p>{selectedTechnology.description}</p>
-                </div>
+                <div className="technology-page__info">
+                    <div>
+                        <h2 className="technology-page__terminology">The terminology...</h2>
+                        <h3 className="technology-page__name">{selectedTechnology.name}</h3>
+                        <p className="technology-page__description">{selectedTechnology.description}</p>
+                    </div>
 
-                <div>
-                    <ul className="technology-page__selection-dots">
-                        {data['technology'].map((technology, idx) => {
-                            return (
-                                <li className="technology-page__dot" key={idx}>
-                                    <button className={(idx === isActive) ? 'active' : null} onClick={(e) => handleClick(e, idx)}>
-                                        <span className="sr-only">`The ${technology.name}`</span>
-                                    </button>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
+                    <div>
+                        <ul className="technology-page__selection-dots">
+                            {data['technology'].map((technology, idx) => {
+                                return (
+                                    <li className="technology-page__dot" key={idx}>
+                                        <button className={(idx === isActive) ? 'active' : null} onClick={(e) => handleClick(e, idx)}>
+                                            {idx + 1}
+                                        </button>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
 
-                <picture className = "technology-page__img">
-                    <source srcset={portraitImage} media='(min-width: 60em)' />
-                    <img src={landscapeImage} alt={selectedTechnology.name} />
-                </picture>
+                    <picture className = "technology-page__img">
+                        <source srcset={portraitImage} media='(min-width: 60em)' />
+                        <img src={landscapeImage} alt={selectedTechnology.name} />
+                    </picture>
+                </div>
             </section>
         </>
     )

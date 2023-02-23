@@ -5,6 +5,7 @@ import DouglasHurleyImage from '../images/crew/image-douglas-hurley.png';
 import MarkShuttleworthImage from '../images/crew/image-mark-shuttleworth.png';
 import VictorGloverImage from '../images/crew/image-victor-glover.png';
 import AnoushehAnsariImage from '../images/crew/image-anousheh-ansari.png';
+import PageTitle from '../components/PageTitle';
 
 const Crew = () => {
     const [selectedCrew, setSelectedCrew] = useState(data['crew'][0]);
@@ -37,7 +38,7 @@ const Crew = () => {
     return (
         <>
             <section className="crew-page">
-                <h1 className="crew-page__title"><span>02</span>Meet your crew</h1>
+                <PageTitle num={'02'} text={'Meet your crew'} />
 
                 <div className="crew-page__info">
                     <div className="crew-page__details">
