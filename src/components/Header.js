@@ -6,15 +6,15 @@ import '../styles/Header.css';
 
 const Header = () => {
     return (
-        <>
-            <div>
+        <div className="header">
+            <div className = "header__logo">
                 <Link to='/'>
                     <img src={logo} alt='Space Tourism' />
                  </Link>
             </div>
 
             <Navigation />
-        </>
+        </div>
     )
 }
 
