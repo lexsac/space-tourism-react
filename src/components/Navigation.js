@@ -5,28 +5,28 @@ import '../styles/Navigation.css';
 const Navigation = () => {
     return (
         <>
-            <nav>
-                <ul>
-                    <li>
-                        <NavLink to="/">
+            <nav className="navigation">
+                <ul className="navigation__items">
+                    <NavLink to="/">
+                        <li className="navigation__item">
                             <span>00</span>Home
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/destination">
+                        </li>
+                    </NavLink>
+                    <NavLink to="/destination">
+                        <li className="navigation__item">
                             <span>01</span>Destination
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/crew">
+                        </li>
+                    </NavLink>
+                    <NavLink to="/crew">
+                        <li className="navigation__item">
                             <span>02</span>Crew
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/technology">
+                        </li>
+                    </NavLink>
+                    <NavLink to="/technology">
+                        <li className="navigation__item">
                             <span>03</span>Technology
-                        </NavLink>
-                    </li>
+                        </li>
+                    </NavLink>
                 </ul>
             </nav>
         </>
