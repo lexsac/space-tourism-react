@@ -7,6 +7,7 @@ import VictorGloverImage from '../images/crew/image-victor-glover.png';
 import AnoushehAnsariImage from '../images/crew/image-anousheh-ansari.png';
 import PageTitle from '../components/PageTitle';
 import SelectionList from '../components/SelectionList';
+import Image from '../components/Image';
 
 const Crew = () => {
     const [selectedCrew, setSelectedCrew] = useState(data['crew'][0]);
@@ -52,7 +53,7 @@ const Crew = () => {
                         </div>
                     </div>
 
-                    <img className = "crew-page__img" src={image} />
+                    <Image image={image} page={'crew'} />
                 </div>
             </section>
         </>
