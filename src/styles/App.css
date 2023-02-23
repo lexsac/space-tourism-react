@@ -1,0 +1,22 @@
+.App {
+    height: 100vh;
+    background-image: url('../images/home/background-home-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.5rem;
+}
+
+/* Tablet */
+@media (min-width: 35em) {
+    .App {
+        background-image: url('../images/home/background-home-tablet.jpg');
+    }
+}
+
+/* Desktop */
+@media (min-width: 60em) {
+    .App {
+        background-image: url('../images/home/background-home-desktop.jpg');
+        padding: 2.5rem;
+    }
+}
