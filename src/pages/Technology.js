@@ -7,6 +7,7 @@ import SpaceportImageLandscape from '../images/technology/image-spaceport-landsc
 import SpaceportImagePortrait from '../images/technology/image-spaceport-portrait.jpg';
 import SpaceCapsuleImageLandscape from '../images/technology/image-space-capsule-landscape.jpg';
 import SpaceCapsuleImagePortrait from '../images/technology/image-space-capsule-portrait.jpg';
+import PageTitle from '../components/PageTitle';
 
 const Technology = () => {
     const [selectedTechnology, setSelectedTechnology] = useState(data['technology'][0]);
@@ -51,9 +52,7 @@ const Technology = () => {
     return (
         <>
             <section className = "technology-page">
-                <div>
-                    <h1 className = "technology-page__title"><span>03</span>Space launch 101</h1>
-                </div>
+                <PageTitle num={'03'} text={'Space launch 101'} />
 
                 <div>
                     <h2>The terminology...</h2>
