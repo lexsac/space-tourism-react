@@ -38,36 +38,36 @@ const Destination = () => {
     return (
         <>
             <section className="destination-page">
-                <div>
-                    <h1 className="destination-page__title"><span>01</span>Pick your destination</h1>
-                    
+                <h1 className="destination-page__title"><span>01</span>Pick your destination</h1>
+
+                <div>                    
                     <img className="destination-page__img" src={image} alt='' />
-                </div>
 
-                <div className="destination-page__text">
-                    <ul className="destination-page__tab-list">
-                        {data['destinations'].map((planet, idx) => {
-                            return (
-                                <li className="destination-page__tab" key={idx}>
-                                    <button className={(idx === isActive) ? 'active' : null} onClick={(e) => handleClick(e, idx)}>{planet.name}</button>
-                                </li>
-                            )
-                        })}
-                    </ul>
+                    <div className="destination-page__text">
+                        <ul className="destination-page__tab-list">
+                            {data['destinations'].map((planet, idx) => {
+                                return (
+                                    <li className="destination-page__tab" key={idx}>
+                                        <button className={(idx === isActive) ? 'active' : null} onClick={(e) => handleClick(e, idx)}>{planet.name}</button>
+                                    </li>
+                                )
+                            })}
+                        </ul>
 
-                    <h2 className="destination-page__name">{selectedPlanet.name}</h2>
-                    <p className="destination-page__description">{selectedPlanet.description}</p>
+                        <h2 className="destination-page__name">{selectedPlanet.name}</h2>
+                        <p className="destination-page__description">{selectedPlanet.description}</p>
 
-                <div className="destination-page__info">
-                    <div>
-                        <h3 className="destination-page__info-title">Avg. distance</h3>
-                        <p className="destination-page__info-data">{selectedPlanet.distance}</p>
+                        <div className="destination-page__info">
+                            <div>
+                                <h3 className="destination-page__info-title">Avg. distance</h3>
+                                <p className="destination-page__info-data">{selectedPlanet.distance}</p>
+                            </div>
+                            <div>
+                                <h3 className="destination-page__info-title">Est. travel time</h3>
+                                <p className="destination-page__info-data">{selectedPlanet.travel}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h3 className="destination-page__info-title">Est. travel time</h3>
-                        <p className="destination-page__info-data">{selectedPlanet.travel}</p>
-                    </div>
-                </div>
                 </div>
             </section>
         </>
