@@ -1,0 +1,97 @@
+@import './index.css';
+
+.destination-page {
+    text-align: center;
+}
+
+.destination-page__img {
+    margin-inline: auto;
+    max-width: 60%;
+}
+
+.destination-page__description {
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+.destination-page__title > span {
+    display: inline;
+    padding-right: 1rem;
+    color:hsl( var(--clr-light-cream) / 0.3 );
+    font-weight: var(--fw-bold);
+}
+
+.destination-page__title {
+    text-transform: uppercase;
+    color: hsl(var(--clr-light-cream));
+    font-family: var(--ff-body-condensed);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+    letter-spacing: var(--ls-med);
+}
+
+.destination-page__name {
+    color: hsl(var(--clr-light-cream));
+    font-size: var(--fs-800);
+    text-transform: uppercase;
+    font-weight: var(--fw-regular);
+    font-family: var(--ff-heading);
+}
+
+.destination-page__description {
+    color: hsl(var(--clr-light-purple));
+    font-family: var(--ff-body);
+    font-size: var(--fs-300);
+}
+
+.destination-page__info {
+    display: flex;
+    color: hsl(var(--clr-light-cream));
+    flex-direction: column;
+    gap: 2rem;
+    border-top: 1px solid hsl(var(--clr-light-cream) / 0.2);
+}
+
+.destination-page__info-title {
+    color: hsl(var(--clr-light-purple));
+    text-transform: uppercase;
+    font-family: var(--ff-body-condensed);
+    font-size: var(--fs-200);
+    font-weight: var(--fw-regular);
+    letter-spacing: var(--ls-sm);
+}
+
+.destination-page__info-data {
+    text-transform: uppercase;
+    font-family: var(--ff-heading);
+    font-size: var(--fs-700);
+}
+
+.destination-page__tab-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.625rem;
+}
+
+.destination-page__tab > * {
+    cursor: pointer;
+    border: none;
+    border-bottom: 0.2rem solid hsl(var(--clr-light-cream) / 0);
+    text-transform: uppercase;
+    color: hsl(var(--clr-light-purple));
+    font-size: var(--fs-200);
+    font-family: var(--ff-body-condensed);
+    letter-spacing: var(--ls-sm);
+    background: none;
+}
+
+.destination-page__tab > *:hover,
+.destination-page__tab > *:focus {
+    border-color: hsl(var(--clr-light-cream) / 0.5);
+} 
+
+.destination-page__tab > *.active,
+.destination-page__tab > [aria-selected="true"] {
+    border-color: hsl(var(--clr-light-cream) / 1);
+    color: hsl(var(--clr-light-cream));
+}
