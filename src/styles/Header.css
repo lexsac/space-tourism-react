@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Desktop nav */
+@media (min-width: 60em) {
+    .header {
+        /* padding-top: 2.5rem; */
+    }
+}
