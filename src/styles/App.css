@@ -1,8 +1,12 @@
-.app {
-    height: 100vh;
-    padding: 1.5rem;
+.app__home, 
+.app__destination,
+.app__crew,
+.app__technology {
     background-repeat: no-repeat;
+    background-position: top;
     background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .app__home {
