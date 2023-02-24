@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-.img-div {
+.crew-page__img-container {
     display: flex;
     align-items: flex-end;
     height: 250px;
@@ -117,7 +117,7 @@
         font-size: var(--fs-750);
     }
 
-    .img-div {
+    .crew-page__img-container {
         height: 100%;
         border-bottom: none;
     }
