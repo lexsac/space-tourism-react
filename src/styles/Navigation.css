@@ -65,6 +65,9 @@
 
     .navigation__btn-toggle.open {
         background-image: url('../images/shared/icon-close.svg');
+        position: absolute;
+        top: 5%;
+        right: 7%;
     }
 }
 
