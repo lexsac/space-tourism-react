@@ -45,7 +45,7 @@
 /* Desktop */
 @media (min-width: 60em) {
     .button {
-        padding: 5.5rem;
+        padding: 4rem;
         font-size: var(--fs-725);
     }
 
