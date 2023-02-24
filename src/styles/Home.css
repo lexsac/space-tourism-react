@@ -6,7 +6,8 @@
     font-weight: var(--fw-regular);
     display: flex;
     flex-direction: column;
-    height: 75vh;
+    height: 70vh;
+    gap: 3.5rem;
 }
 
 .home-page > * {
@@ -19,6 +20,7 @@
     font-weight: var(--fw-regular);
     letter-spacing: var(--ls-med);
     font-size: var(--fs-400);
+    margin-top: 3rem;
 }
 
 .home-page__title > span {
@@ -26,6 +28,7 @@
     color: white; /* custom property wasn't working*/
     font-size: var(--fs-900);
     display: block;
+    margin-top: 1rem;
 }
 
 .home-page__description {
@@ -38,14 +41,27 @@
 
 /* Tablet */
 @media (min-width: 35em) {
+    .home-page {
+        gap: 8rem;
+    }
+
     .home-page__title {
         letter-spacing: var(--ls-lg);
         font-size: var(--fs-500);
+        margin-top: 6.625rem;
+
+    }
+
+    .home-page__title > span {
+        font-size: var(--fs-950);
+        margin-top: 1.5rem;
     }
 
     .home-page__description {
+        font-size: var(--fs-400);
         max-width: 27.75rem;
-        margin: 0 auto;
+        margin-top: 1.5rem;
+        margin-inline: auto;
         line-height: var(--lh-sm);
     }
 }
@@ -65,15 +81,9 @@
         font-size: var(--fs-700);
     }
 
-    .home-page__title > span {
-        font-size: var(--fs-950);
-        margin-top: 1.5rem;
-    }
-
     .home-page__description {
         margin-left: 0;
         line-height: var(--lh-med);
-        margin-top: 1.5rem;
         font-size: var(--fs-450);
     }
 }
