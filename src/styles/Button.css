@@ -21,19 +21,41 @@
     width: 100%;
     height: 100%;
     border-radius: inherit;
-    transition: transform 500ms ease-in-out;
 }
 
-.button:hover::after,
-.button:active::after {
-    transform: scale(1.5); /* animation on width and height is taxing for browser and could lead to overflows, so this is a better option */
-}
-
-/* Desktop */
-@media (min-width: 60em) {
-    .button {
-        padding: 4rem;
+/* Mobile */
+@media (max-width: 43.99em) {
+    .button::after {
+        animation: pulse 7s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.5);
+        }
+        100% {
+          transform: scale(1);
+        }
     }
 }
 
+/* Tablet/Desktop */
+@media (min-width: 44em) {
+    .button {
+        padding: 5.5rem;
+        font-size: var(--fs-725);
+    }
 
+    .button::after {
+        transition: transform 500ms ease-in-out;
+    }
+
+    .button:hover::after,
+    .button:active::after {
+        /* animation on width and height is taxing for browser and could lead to overflows, so this is a better option */
+        transform: scale(1.5); 
+    }
+}
