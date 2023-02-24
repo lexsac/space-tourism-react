@@ -1,9 +1,5 @@
 @import './index.css';
 
-.technology-page {
-    padding-inline: 1.5rem;
-}
-
 .technology-page__info {
     display: flex;
     flex-direction: column;
@@ -83,16 +79,12 @@
 
 /* Tablet */
 @media (min-width: 35em) {
-    .technology-page {
+    .technology-page > .page-title {
         padding-inline: 2.4375rem;
     }
 
     .technology-page__img {
         margin-top: 3.75rem;
-    }
-
-    .technology-page > .page-title {
-        padding-left: 2.4375rem;
     }
 
     .technology-page__selectors {
