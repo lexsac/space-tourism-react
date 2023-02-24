@@ -10,19 +10,19 @@ import './styles/App.css';
 
 const App = () => {
   const location = useLocation();
-  const [path, setPath] = useState('app__home app');
+  const [path, setPath] = useState('app__home');
 
   useEffect(() => {
     if (location.pathname === '/') {
-        setPath('app__home app')
+        setPath('app__home')
     }
 
     if (location.pathname === '/destination') {
-        setPath('app__destination app')
+        setPath('app__destination')
     }
 
     if (location.pathname === '/crew') {
-        setPath('app__crew app')
+        setPath('app__crew')
     }
 
     if (location.pathname === '/technology') {
