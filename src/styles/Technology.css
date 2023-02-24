@@ -1,7 +1,14 @@
+@import './index.css';
+
+.technology-page {
+    padding-inline: 1.5rem;
+}
+
 .technology-page__info {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 
 .technology-page__img {
@@ -47,7 +54,7 @@
     margin-top: 2rem;
 }
 
-.technology-page__selector > * {
+.technology-page__selector > button {
     cursor: pointer;
     border-radius: 50%;
     border: 1px solid hsl( var(--clr-light-cream) / 0.3);
@@ -59,32 +66,40 @@
     font-size: var(--fs-400);
 }
 
-.technology-page__selector > *:hover,
-.technology-page__selector > *:focus {
+.technology-page__selector > button:hover,
+.technology-page__selector > button:focus {
     border-color: hsl( var(--clr-light-cream) / 1);
 }
 
-.technology-page__selector:active > * {
+.technology-page__selector:active > button {
     background-color: hsl( var(--clr-light-cream) / 1);
     color: var(--clr-dark-blue);
 }
 
-.technology-page__selector.active > * {
+.technology-page__selector.active > button {
     background-color: hsl( var(--clr-light-cream) / 1);
     color: var(--clr-dark-blue);
 }
 
 /* Tablet */
 @media (min-width: 35em) {
+    .technology-page {
+        padding-inline: 2.4375rem;
+    }
+
     .technology-page__img {
         margin-top: 3.75rem;
+    }
+
+    .technology-page > .page-title {
+        padding-left: 2.4375rem;
     }
 
     .technology-page__selectors {
         margin-top: 3.5rem;
     }
 
-    .technology-page__selector > * {
+    .technology-page__selector > button {
         font-size: var(--fs-600);
         width: 3.75rem;
     }
@@ -113,7 +128,59 @@
 
 /* Desktop */
 @media (min-width: 60em) {
-    .technology-page {
-        margin-inline: 10rem;
+    .technology-page__info {
+        flex-direction: row;
+        text-align: left;
+        margin-left: 6rem;
+        margin-top: 8.5625rem;
+        gap: 5rem;
+        align-items: flex-start;
+    }
+
+    .technology-page__selectors {
+        order: 1;
+        flex-direction: column;
+        margin-top: 0;
+        gap: 2rem;
+        width: 5rem;
+    }
+
+    .technology-page__selectors {
+        order: 1;
+        flex-direction: column;
+        margin-top: 0;
+        gap: 2rem;
+    }
+
+    .technology-page__selector > button {
+        width: 5rem;
+        font-size: var(--fs-725);
+    }
+
+    .technology-page__details {
+        order: 2;
+        margin-top: 0;
+    }
+
+    .technology-page__img {
+        order: 3;
+        position: absolute;
+        right: 0;
+        top: 20%;
+    }
+
+    .technology-page__terminology {
+        font-size: var(--fs-400);
+        letter-spacing: var(--ls-med);
+    }
+
+    .technology-page__name {
+        font-size: var(--fs-800);
+    }
+
+    .technology-page__description {
+        padding-inline: 0;
+        font-size: var(--fs-450);
+        line-height: var(--lh-med);
     }
 }
