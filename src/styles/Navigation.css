@@ -3,7 +3,7 @@
 .navigation__items {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .navigation__item {
@@ -33,7 +33,9 @@
         top: 0;
         text-align: left;
         right: 0;
+        bottom: 0;
         z-index: 100;
+        width: 70%;
         padding: 5rem 2rem;
     }
     
@@ -44,6 +46,11 @@
     .navigation__items.open {
         display: flex;
         flex-direction: column;
+        margin-top: 2.5rem;
+    }
+
+    .navigation__item > span {
+        display: inline;
     }
 
     .navigation__btn-toggle {
