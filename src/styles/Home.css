@@ -25,12 +25,15 @@
     font-family: var(--ff-heading);
     color: white; /* custom property wasn't working*/
     font-size: var(--fs-900);
+    display: block;
 }
 
 .home-page__description {
     font-size: var(--fs-300);
     font-family: var(--ff-body);
     margin-top: 1rem;
+    max-width: 20.4375rem;
+    margin-inline: auto;
 }
 
 /* Tablet */
@@ -38,10 +41,6 @@
     .home-page__title {
         letter-spacing: var(--ls-lg);
         font-size: var(--fs-500);
-    }
-
-    .home-page__title > span {
-        display: block;
     }
 
     .home-page__description {
