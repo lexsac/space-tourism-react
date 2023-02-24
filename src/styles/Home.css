@@ -55,7 +55,7 @@
     .home-page {
         flex-direction: row;
         text-align: left;
-        max-width: 1110px;
+        max-width: 900px;
         margin-inline: auto;
         justify-content: space-between;
     }
@@ -75,5 +75,12 @@
         line-height: var(--lh-med);
         margin-top: 1.5rem;
         font-size: var(--fs-450);
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 82em) {
+    .home-page {
+        max-width: 1100px;
     }
 }

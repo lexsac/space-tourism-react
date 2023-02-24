@@ -10,7 +10,8 @@
 
 .destination-page__img {
     margin-inline: auto;
-    max-width: 60%;
+    width: 100%;
+    max-width: 170px;
     margin-top: 2rem;
 }
 
@@ -146,15 +147,14 @@
 @media (min-width: 60em) {
     .destination-page__info {
         display: flex;
-        max-width: 1050px;
+        max-width: 1100px;
         margin-inline: auto;
         padding-top: 2rem;
         text-align: left;
-        gap: 10rem;
     }
 
     .destination-page__img {
-        max-width: 445px;
+        width: 100%;
     }
 
     .destination-page__description {
@@ -179,5 +179,16 @@
     .destination-page__facts {
         justify-content: left;
         gap: 5rem;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 82em) {
+    .destination-page__info {
+        gap: 12rem;
+    }
+
+    .destination-page__img {
+        max-width: 445px;
     }
 }
