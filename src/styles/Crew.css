@@ -115,10 +115,12 @@
         max-width: 28.625rem;
         margin-inline: auto;
         margin-top: 1rem;
+        height: 100px;
     }
 
     .crew-page__role {
         font-size: var(--fs-600);
+        margin-top: 3.75rem;
     }
 
     .crew-page__name {
@@ -133,7 +135,7 @@
     .crew-page__img > * {
         position: absolute;
         bottom: 0;
-        height: 500px;
+        height: 40%;
         transform: translateX(-50%);
     }
 }
@@ -175,11 +177,19 @@
     }
 
     .crew-page__img > * {
-        height: 650px;
-        transform: translateX(25%);
+        height: 500px;
+        transform: translateX(35%);
     }
 
     .crew-page__selectors {
         justify-content: left;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 82em) {
+    .crew-page__img > * {
+        height: 650px;
+        transform: translateX(25%);
     }
 }
