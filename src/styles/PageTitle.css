@@ -1,3 +1,5 @@
+@import './index.css';
+
 .page-title > span {
     display: inline;
     padding-right: 1rem;
@@ -30,5 +32,6 @@
     .page-title {
         margin-top: 7rem;
         font-size: var(--fs-700);
+        margin-left: 6rem;
     }
 }
