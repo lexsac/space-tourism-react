@@ -1,12 +1,32 @@
+@import './index.css';
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-inline: 1.5rem;
+    padding-top: 1.5rem;
 }
 
-/* Desktop nav */
+/* Tablet */
+@media (min-width: 44em) {
+    .header {
+        padding-inline: 0;
+        padding-top: 0;
+    }
+
+    .header__logo {
+        padding-left: 2.5rem;
+    }
+}
+
+/* Desktop */
 @media (min-width: 60em) {
     .header {
-        /* padding-top: 2.5rem; */
+        padding-top: 2.5rem;
+    }
+
+    .header__logo {
+        padding-left: 3.4275rem;
     }
 }
