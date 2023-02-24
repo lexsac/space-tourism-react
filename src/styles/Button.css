@@ -42,11 +42,18 @@
     }
 }
 
+/* Tablet */
+@media (min-width: 35em) {
+    .button {
+        padding: 3rem;
+        font-size: var(--fs-725);
+    }
+}
+
 /* Desktop */
 @media (min-width: 60em) {
     .button {
         padding: 4rem;
-        font-size: var(--fs-725);
     }
 
     .button::after {
