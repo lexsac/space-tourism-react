@@ -6,6 +6,11 @@
     font-weight: var(--fw-regular);
     display: flex;
     flex-direction: column;
+    height: 75vh;
+}
+
+.home-page > * {
+    margin-top: auto;
 }
 
 .home-page__title {
@@ -25,6 +30,7 @@
 .home-page__description {
     font-size: var(--fs-300);
     font-family: var(--ff-body);
+    margin-top: 1rem;
 }
 
 /* Tablet */
@@ -34,8 +40,12 @@
         font-size: var(--fs-500);
     }
 
+    .home-page__title > span {
+        display: block;
+    }
+
     .home-page__description {
-        max-width: 65%;
+        max-width: 27.75rem;
         margin: 0 auto;
         line-height: var(--lh-sm);
     }
@@ -44,17 +54,27 @@
 /* Desktop */
 @media (min-width: 60em) {
     .home-page {
-        margin-inline: 10rem;
         flex-direction: row;
         text-align: left;
+        max-width: 1110px;
+        margin-inline: auto;
+        justify-content: space-between;
     }
 
     .home-page__title {
         letter-spacing: var(--ls-xl);
+        font-size: var(--fs-700);
+    }
+
+    .home-page__title > span {
+        font-size: var(--fs-950);
+        margin-top: 1.5rem;
     }
 
     .home-page__description {
         margin-left: 0;
         line-height: var(--lh-med);
+        margin-top: 1.5rem;
+        font-size: var(--fs-450);
     }
 }
