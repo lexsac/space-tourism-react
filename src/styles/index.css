@@ -37,6 +37,7 @@
     --ls-xl: 4.75px;
 
     /* line height */
+    --lh-xs: 1.5625rem; /* 25px */
     --lh-sm: 1.75rem; /* 28px */
     --lh-med: 2rem; /* 32px */
 }
