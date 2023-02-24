@@ -6,10 +6,18 @@
     text-align: center;
 }
 
-.crew-page__img {
-    width: 50%;
-    margin-inline: auto;
-    border-bottom: 1px solid hsl(var(--clr-light-cream) / 0.2);
+.img-div {
+    display: flex;
+    align-items: flex-end;
+    height: 250px;
+    border-bottom: 1.5px solid hsl(var(--clr-light-cream) / 0.17);
+    justify-content: center;
+}
+
+.crew-page__img > * {
+    align-self: flex-end;
+    height: 220px;
+    width: auto;
 }
 
 .crew-page__title {
@@ -24,19 +32,25 @@
     font-family: var(--ff-heading);
     text-transform: uppercase;
     color: hsl(var(--clr-light-cream) / 0.3);
-    font-size: var(--fs-600);
+    font-size: var(--fs-400);
+    margin-top: 2rem;
 }
 
 .crew-page__name {
     font-family: var(--ff-heading);
     text-transform: uppercase;
     color: hsl(var(--clr-light-cream));
-    font-size: var(--fs-750);
+    font-size: var(--fs-600);
+    line-height: var(--lh-sm);
+    margin-top: 0.5rem;
 }
 
 .crew-page__bio {
     font-family: var(--ff-body);
     color: hsl(var(--clr-light-purple));
+    margin-top: 1rem;
+    line-height: var(--lh-xs);
+    margin-bottom: 1rem;
 }
 
 .crew-page__title > span {
@@ -50,6 +64,30 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+.crew-page__selector > button {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 0.625rem;
+    aspect-ratio: 1;
+    border: none;
+    background: hsl(var(--clr-light-cream) / 0.17);
+}
+
+.crew-page__selector > button:hover,
+.crew-page__selector > button:focus {
+   background: hsl(var(--clr-light-cream) / 0.4);
+} 
+
+.crew-page__selector > button:active {
+    background: hsl(var(--clr-light-cream) / 1);
+}
+
+.crew-page__selector > button.active {
+    background: hsl(var(--clr-light-cream) / 1);
 }
 
 /* Tablet */
@@ -64,8 +102,31 @@
     }
 
     .crew-page__bio {
-        max-width: 60%;
+        font-size: var(--fs-400);
+        line-height: var(--lh-sm);
+        max-width: 28.625rem;
         margin-inline: auto;
+        margin-top: 1rem;
+    }
+
+    .crew-page__role {
+        font-size: var(--fs-600);
+    }
+
+    .crew-page__name {
+        font-size: var(--fs-750);
+    }
+
+    .img-div {
+        height: 100%;
+        border-bottom: none;
+    }
+    
+    .crew-page__img > * {
+        position: absolute;
+        bottom: 0;
+        height: 500px;
+        transform: translateX(-50%);
     }
 }
 
