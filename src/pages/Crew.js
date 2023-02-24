@@ -53,7 +53,9 @@ const Crew = () => {
                         </div>
                     </div>
 
-                    <Image page={'crew'} landscapeImage={image} portraitImage={image} alt={selectedCrew.name} />
+                    <div className="crew-page__img-container">
+                        <Image page={'crew'} landscapeImage={image} portraitImage={image} alt={selectedCrew.name} />
+                    </div>
                 </div>
             </section>
         </>
