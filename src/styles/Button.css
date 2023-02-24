@@ -23,8 +23,8 @@
     border-radius: inherit;
 }
 
-/* Mobile */
-@media (max-width: 43.99em) {
+/* Mobile/Tablet */
+@media (max-width: 59.99em) {
     .button::after {
         animation: pulse 7s ease-in-out infinite;
     }
@@ -42,8 +42,8 @@
     }
 }
 
-/* Tablet/Desktop */
-@media (min-width: 44em) {
+/* Desktop */
+@media (min-width: 60em) {
     .button {
         padding: 5.5rem;
         font-size: var(--fs-725);
