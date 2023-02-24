@@ -54,18 +54,18 @@ const Technology = () => {
     return (
         <>
             <section className = "technology-page">
-                <PageTitle num={'03'} text={'Space launch 101'} />
+                <PageTitle className = "technology-page__page-title" num={'03'} text={'Space launch 101'} />
 
                 <div className="technology-page__info">
-                    <div>
+                    <Image page={'technology'} landscapeImage={landscapeImage} portraitImage={portraitImage} alt={selectedTechnology.name} />
+
+                    <SelectionList data={data} page={'technology'} isActive={isActive} handleClick={handleClick} buttonText={'index'} />
+
+                    <div className="technology-page__details">
                         <h2 className="technology-page__terminology">The terminology...</h2>
                         <h3 className="technology-page__name">{selectedTechnology.name}</h3>
                         <p className="technology-page__description">{selectedTechnology.description}</p>
                     </div>
-
-                    <SelectionList data={data} page={'technology'} isActive={isActive} handleClick={handleClick} buttonText={'index'} />
-
-                    <Image page={'technology'} landscapeImage={landscapeImage} portraitImage={portraitImage} alt={selectedTechnology.name} />
                 </div>
             </section>
         </>
